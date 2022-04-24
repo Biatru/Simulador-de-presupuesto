@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--CSS-->
+  <link rel="stylesheet" href="./css/estilos.css">
+
+<title>Simulador presupuesto</title>
+</head>
+<body>
+  <main>
+    <section class="sec-1">
+        <div class="container">
+            <h1 id="titulo" >Ingresa tus datos y obtén tu presupuesto rapidamente</h1>
+            <form action="" class="formulario">
+                <div>
+                <input id ="nombre" type="text" placeholder="Ingresa tu nombre"  class="formulario_input">
+                <label for="" class="formulario_label">Nombre</label>
+                </div>
+                <div>
+                <input id="telefono" type="text"  placeholder="Ingresa tu teléfono" class="formulario_input">
+                <label for="" class="formulario_label">Telefono</label>
+                </div>
+                <div>
+                  <input id="email" type="text"  placeholder="Ingresa tu email" class="formulario_input">
+                  <label for="" class="formulario_label">Email</label>
+                  <label for="estadia">Estadía</label>
+                    <select name="" id="estadia">
+                        <option value="por dia">por dia</option>
+                        <option value="por semana">por semana</option>
+                    </select> 
+                </div>           
+                <div>
+                  <label for="habitacion">Habitaciones</label>
+                  <select name="" id="habitacion">
+                      <option value="Individual Sin Comida" >Individual Sin Comida</option>
+                      <option value="Individual Con Comida" >Individual Con Comida</option>
+                      <option value="Doble Sin Comida" >Doble Sin Comida</option>
+                      <option value="Doble Con Comida" >Doble Con Comida</option>
+                  </select> 
+                </div>
+                <div>
+                    <button type = "button" onclick ="capturarDatos(); generarPresupuesto();">OBTENER PRESUPUESTO</button> 
+                </div>
+             </form>  
+        </div>                           
+    </section>
+  </main>
+<script src="main.js"></script>
+</body>
+</html>

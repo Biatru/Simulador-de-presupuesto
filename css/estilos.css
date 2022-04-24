@@ -1,0 +1,62 @@
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+body{
+    margin: 0;
+    padding:0;
+}
+h1{
+    font-size: 3.5rem;
+    color: #dfd7d7;
+    font-family:"Caveat", cursive;
+}
+
+main{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction:row;
+    flex-wrap: wrap;   
+    width:100%;
+    margin:auto;
+    padding-top:100px; 
+    color:#3f3f3f;
+     
+}
+label{
+    font-size: 30px;
+    font-family:"Caveat", cursive;
+}
+
+#habitacion, #estadia{
+    margin: 20px 20px 20px 20px;
+    font-size: 20px;
+    font-family:"Caveat", cursive ;
+}
+
+button, .formulario_submit{
+    display: inline-block;
+    margin-left: 150px;
+    margin-top: 10px;
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color:turquoise;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 300ms;
+    font-family:"Caveat", cursive;
+}
+
+button:focus{
+    outline:none;
+}
+.formulario_label, .formnulario_input {
+    display: block;
+    width: 100%;
+    font-size: 3.2rem;
+}
