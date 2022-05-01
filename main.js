@@ -5,6 +5,20 @@ La idea es que si el cliente quiere un presupuesto primero nos tiene que dar sus
 asi obtenemos de a poco una base de datos de clientes. 
 Seleccionando cada una de las opciones y apretando el boton en el consola sale el presupuesto */
 
+/*Incorporando eventos: Con el siguiente evento la idea es tomar todos los elementos con clase "formulario_input" y los agrego a la variable inputs, recorro dicha variable, escucha y si alguno de sus elementos tiene un caracter le incorpora la clase fijar, asi no se baja el titulo pj "Nombre" y tapa lo que se escribe*/
+
+let inputs = document.getElementsByClassName("formulario_input");
+for ( let i = 0; i <inputs.length; i++ ){
+   inputs[i].addEventListener("keyup",function(){
+      if(this.value.length>=1){
+         this.nextElementSibling.classList.add("fijar");
+      }else{
+         this.nextElementSibling.classList.remove("fijar");
+      }
+   })
+}
+
+
 function capturarDatos(){ 
    function Cliente(nombre,telefono,email){ /*Constructor de cliente*/
       this.nombre = nombre;
@@ -93,7 +107,7 @@ for ( let i = 1; i <= 6; i++ ) {
   console.log (total = valor * i);
 }
 }
-/*Con map logre calcular el valor de cada canil con IVA,
+/*Con map logre calcular el valor de cada canil con IVA ,
  todavia no lo hice en el index.html solo se ve en la consola*/
 const caniles = [
    {tipo: "SimpleSinPensionDia", valor: 3000},
