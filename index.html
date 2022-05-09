@@ -10,20 +10,22 @@
 <title>Simulador presupuesto</title>
 </head>
 <body>
-   <form action="" class="formulario">
+   <form action="" class="formulario" id="formulario1">
        <h1>Consigue tu presupuesto</h1>
-        <input id ="nombre" type="text"  class="formulario_input">
+        <input id ="nombre" type="text"  class="formulario_input" required>
         <label for="" class="formulario_label">Nombre</label>
                 
-        <input id="telefono" type="text" class="formulario_input">
+        <input id="telefono" type="text" class="formulario_input" required>
         <label for="" class="formulario_label">Telefono</label>
                 
-        <input id="email" type="text"   class="formulario_input">
+        <input id="email" type="text"   class="formulario_input" required>
         <label for="" class="formulario_label">Email</label>
+        <button class="formulario_submit" id ="boton1" > Dejanos tus datos </button>
         
-        <div class="seleccionar">    
+        <div class="seleccionar" id="formulario2">    
         <label>Estadía</label>
                 <select class="option" name="" id="estadia">
+                    <option  value="">Elija una opción</option>
                     <option  value="por dia">por dia</option>
                     <option  value="por semana">por semana</option>
                 </select> 
@@ -31,19 +33,26 @@
         <div class="seleccionar">           
         <label>Habitaciones</label>
                 <select class="option"  name="" id="habitacion">
+                    <option  value="" >Elija una opción</option>
                     <option  value="Individual Sin Comida" >Individual Sin Comida</option>
                     <option  value="Individual Con Comida" >Individual Con Comida</option>
                     <option  value="Doble Sin Comida" >Doble Sin Comida</option>
                     <option  value="Doble Con Comida" >Doble Con Comida</option>
                 </select> 
-        </div>       
-        
-        <button class="formulario_submit" type ="button" onclick ="capturarDatos(); generarPresupuesto();">Obtener presupuesto</button>
+        </div>     
+        <button class="formulario_submit" id ="boton2" > Obtener presupuesto </button>
+        <div class="resultado" id="resultado">
+            <div class="datos">
+              <p>nombre<p>
+              <p>telefono</p>
+              <p>email</p>
+            </div>
 
-        
-          
+        </div>
+    
+    
     </form>  
-        
+<script src="funciones.js"></script>
 <script src="main.js"></script>
 </body>
 </html>

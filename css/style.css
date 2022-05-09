@@ -63,8 +63,25 @@ h1{
     cursor: pointer;
     border: none;
     font-family:"Caveat", cursive;
+    transition: 3s ease all;
     
+}
+.formulario_submit:hover{
+    background:lightblue;
+}
+#boton1{
+    margin-bottom: 30px;
 }
 .fijar{
     margin-top: -130px;
+}
+.resultado{
+    display: flex;
+    flex-direction: column;
+}
+.datos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 4rem;
 }
