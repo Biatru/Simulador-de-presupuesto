@@ -32,4 +32,3 @@ const crearCliente = (parentNode,cliente,local)=>{
    parentNode.appendChild(divCliente)
    
 }
-   

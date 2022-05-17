@@ -29,16 +29,16 @@ const local = window.localStorage
 
 
 boton.onclick = ()=> {
-     let cliente ={
+   let cliente = {
       id: Math.random(1,100),
       nombre: nombre.value,
       telefono: telefono.value,
       email: email.value,
    }
   agregarDatos(local, cliente) /*esta creada en el archivo funciones.js*/
+ 
 }
-
-cargarCliente (local, resultado) /*esta creada en el archivo funciones.js*/
+cargarCliente  (local, resultado) /*esta creada en el archivo funciones.js*/
 
 
 
@@ -54,7 +54,7 @@ const DobleConPensionSemana = 12600; //canil para dos perro con alimento incluid
 
 const generarPresupuesto = document.getElementById("boton2")
 
-
+/*Aplicamos SweetAlert2 para obtener el presupuesto*/ 
 generarPresupuesto.onclick = (estadia, habitacion) =>{
    estadia = document.getElementById ("estadia").value;
    habitacion = document.getElementById ("habitacion").value;
@@ -62,44 +62,110 @@ generarPresupuesto.onclick = (estadia, habitacion) =>{
    let precio = 0;
    
    if ((estadia === "por dia") && (habitacion === "Individual Sin Comida")){
-      mjs ="El precio de su presupuesto es:  ";
+      mjs ="El precio de su presupuesto es:  $";
       precio = SimpleSinPensionDia;
-      console.log (mjs + precio);
+      swal.fire ({
+       imageUrl:'./imagenes/perro.jpg',
+       imageHeight:300,
+       imageAlt: 'perro',
+       title: 'Estimado huesped',
+       text: mjs + precio,
+       icon:'info'
+      });
    }
    else if ((estadia === "por dia") && (habitacion === "Individual Con Comida")){
-      mjs = "El precio de su presupuesto es:  ";
+      mjs = "El precio de su presupuesto es:  $";
       precio = SimpleConPensionDia;
-      console.log (mjs + precio);
+      swal.fire ({
+         imageUrl:"./imagenes/perro.jpg",
+         imageHeight:300,
+         imageAlt: 'perro',
+         title: 'Estimado huesped',
+         text: mjs + precio,
+         icon:'info'
+        });
    }
    else if ((estadia === "por dia") && (habitacion === "Doble Sin Comida")){
-      mjs = "El precio de su presupuesto es:  ";
+      mjs = "El precio de su presupuesto es:  $";
       precio = DobleSinPensionDia;
-      console.log (mjs + precio);
+      swal.fire ({
+         imageUrl:"./imagenes/perro.jpg",
+         imageHeight:300,
+         imageAlt: 'perro',
+         title: 'Estimado huesped',
+         text: mjs + precio,
+         icon:'info'
+        });
    }
    else if ((estadia === "por dia") && (habitacion === "Doble Con Comida")){
-      mjs = "El precio de su presupuesto es:  ";
+      mjs = "El precio de su presupuesto es:  $";
       precio = DobleConPensionDia;
-      console.log (mjs + precio);
+      swal.fire ({
+         imageUrl:"./imagenes/perro.jpg",
+         imageHeight:300,
+         imageAlt: 'perro',
+         title: 'Estimado huesped',
+         text: mjs + precio,
+         icon:'info'
+        });
    }
    else if ((estadia === "por semana") && (habitacion === "Individual Sin Comida")){
-      mjs = "El precio de su presupuesto es:  ";
+      mjs = "El precio de su presupuesto es:  $";
       precio = SimpleSinPensionSemana;
-      console.log (mjs + precio);
+      swal.fire ({
+         imageUrl:"./imagenes/perro.jpg",
+         imageHeight:300,
+         imageAlt: 'perro',
+         title: 'Estimado huesped',
+         text: mjs + precio,
+         icon:'info'
+        });
    }
    else if ((estadia === "por semana") && (habitacion === "Individual Con Comida")){
-      mjs = "El precio de su presupuesto es:  ";
+      mjs = "El precio de su presupuesto es:  $";
       precio = SimpleConPensionSemana;
-      console.log (mjs + precio);
+      swal.fire ({
+         imageUrl:"./imagenes/perro.jpg",
+         imageHeight:300,
+         imageAlt: 'perro',
+         title: 'Estimado huesped',
+         text: mjs + precio,
+         icon:'info'
+        });
    }
    else if ((estadia === "por semana") && (habitacion === "Doble Sin Comida")){
-      mjs = "El precio de su presupuesto es:  ";
+      mjs = "El precio de su presupuesto es:  $";
       precio = DobleSinPensionSemana;
-      console.log (mjs + precio);
+      swal.fire ({
+         imageUrl:"./imagenes/perro.jpg",
+         imageHeight:300,
+         imageAlt: 'perro',
+         title: 'Estimado huesped',
+         text: mjs + precio,
+         icon:'info'
+        });
    }
    else if ((estadia === "por semana") && (habitacion === "Doble Con Comida")){
-      mjs = "El precio de su presupuesto es:  ";
+      mjs = "El precio de su presupuesto es:  $";
       precio = DobleConPensionSemana;
-      console.log (mjs + precio);
+      swal.fire ({
+         imageUrl:"./imagenes/perro.jpg",
+         imageHeight:300,
+         imageAlt: 'perro',
+         title: 'Estimado huesped',
+         text: mjs + precio,
+         icon:'info'
+        });
+   }
+   else if ((estadia === "Elija una opción") || (habitacion === "Elija una opción")){
+      mjs = "Debe elegir una opcion";
+      swal.fire ({
+         imageUrl:"./imagenes/perro error.jpg",
+         imageHeight:300,
+         imageAlt: 'perro en computadora',
+         text: mjs,
+         icon:'error'
+        });
    }
 }
 
@@ -109,13 +175,4 @@ const formulario = document.getElementById("formulario2");
     
  }
  )
-
  
- 
-
-
-
-
-
-
-

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!--CSS-->
   <link rel="stylesheet" href="./css/style.css">
-
+ 
 <title>Simulador presupuesto</title>
 </head>
 <body>
@@ -15,17 +15,17 @@
         <input id ="nombre" type="text"  class="formulario_input" required>
         <label for="" class="formulario_label">Nombre</label>
                 
-        <input id="telefono" type="text" class="formulario_input" required>
+        <input id="telefono" type="tel" class="formulario_input" required>
         <label for="" class="formulario_label">Telefono</label>
                 
-        <input id="email" type="text"   class="formulario_input" required>
+        <input id="email" type="email" class="formulario_input" required>
         <label for="" class="formulario_label">Email</label>
         <button class="formulario_submit" id ="boton1" > Dejanos tus datos </button>
         
         <div class="seleccionar" id="formulario2">    
         <label>Estadía</label>
                 <select class="option" name="" id="estadia">
-                    <option  value="">Elija una opción</option>
+                    <option  value="Elija una opción">Elija una opción</option>
                     <option  value="por dia">por dia</option>
                     <option  value="por semana">por semana</option>
                 </select> 
@@ -33,14 +33,14 @@
         <div class="seleccionar">           
         <label>Habitaciones</label>
                 <select class="option"  name="" id="habitacion">
-                    <option  value="" >Elija una opción</option>
+                    <option  value="Elija una opción" >Elija una opción</option>
                     <option  value="Individual Sin Comida" >Individual Sin Comida</option>
                     <option  value="Individual Con Comida" >Individual Con Comida</option>
                     <option  value="Doble Sin Comida" >Doble Sin Comida</option>
                     <option  value="Doble Con Comida" >Doble Con Comida</option>
                 </select> 
         </div>     
-        <button class="formulario_submit" id ="boton2" > Obtener presupuesto </button>
+        <button class="formulario_submit" id ="boton2"> Obtener presupuesto </button>
         <div class="resultado" id="resultado">
             <div class="datos">
               <p>nombre<p>
@@ -52,7 +52,8 @@
     
     
     </form>  
-<script src="funciones.js"></script>
-<script src="main.js"></script>
+<script src="./js/funciones.js"></script>
+<script src="./js/main.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
