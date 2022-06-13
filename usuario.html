@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--CSS-->
+  <link rel="stylesheet" href="css/style.css">
+ 
+<title>Simulador presupuesto</title>
+</head>
+<body>
+   <form action="" method="" class="formulario" id="formulario1">
+    <div class="contenedorGaleria" id="contenedor-galeria">
+       <h1>CREA TU USUARIO</h1>
+        <img src="./imagenes/perro1.jpg" id="imagen">
+        <input type="button" id="anterior" value = "anterior" class="pasarImagen">
+        <input type="button" id="siguiente" value = "siguiente" class="pasarImagen">
+
+    </div>
+       </div>
+       <div>
+        <input id ="usuario" type="text" name="usuario" class="formulario_input" required>
+        <label for="usuario" class="formulario_label">Usuario</label>
+        <input id ="clave" type="password" name="clave" class="formulario_input" required>
+        <label for="clave" class="formulario_label">Clave</label>
+        
+        
+       </div>
+      
+       <button type ="button" class="formulario_submit" id ="boton1" onclick= "location.href = 'http://127.0.0.1:5500/index.html';"> Crear Usuario </button>
+        
+       <div>
+       
+  
+    </form>  
+    <script src="./js/validaciones.js"></script>
+    <script src="./js/usuario.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+</body>
+</html>

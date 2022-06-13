@@ -5,55 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!--CSS-->
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="css/style.css">
  
 <title>Simulador presupuesto</title>
 </head>
 <body>
-   <form action="https://formsubmit.co/ajax/beabusaniche@gmail.com" method="POST"" class="formulario" id="formulario1">
-       <h1>Consigue tu presupuesto</h1>
-        <input id ="nombre" type="text" name="name" class="formulario_input" required>
-        <label for="" class="formulario_label">Nombre</label>
-                
-        <input id="telefono" type="tel" class="formulario_input" name="tel" required>
-        <label for="" class="formulario_label">Telefono</label>
-                
-        <input id="email" type="email" class="formulario_input" name="email" required>
-        <label for="" class="formulario_label">Email</label>
-        <button class="formulario_submit" id ="boton1" type="submit"> Dejanos tus datos </button>
-        
-        <div class="seleccionar" id="formulario2">    
-        <label>Estadía</label>
-                <select class="option" name="" id="estadia">
-                    <option  value="Elija una opción">Elija una opción</option>
-                    <option  value="por dia">por dia</option>
-                    <option  value="por semana">por semana</option>
-                </select> 
+   <form action="https://formsubmit.co/beabusaniche@gmail.com" method="POST" class="formulario" id="formulario1" onsubmit="return validar();">
+       <h1>DEJANOS TUS DATOS</h1>
+       <div  class="contenedorGaleria" id="perroInicio">
+        <img src="./imagenes/fondoazul.jpg" id="perroCliente">
+       </div>
+   
+       <div>
+        <input id ="nombre" type="text" name="name" class="formulario_input" >
+        <label for="nombre" class="formulario_label">Nombre</label>
+      
+        <input id="telefono" type="tel" class="formulario_input" name="tel" >
+        <label for="telefono" class="formulario_label">Telefono</label>
+       
+        <input id="email" type="text" class="formulario_input" name="email">
+        <label for="email" class="formulario_label">Email</label>
         </div>
-        <div class="seleccionar">           
-        <label>Habitaciones</label>
-                <select class="option"  name="" id="habitacion">
-                    <option  value="Elija una opción" >Elija una opción</option>
-                    <option  value="Individual Sin Comida" >Individual Sin Comida</option>
-                    <option  value="Individual Con Comida" >Individual Con Comida</option>
-                    <option  value="Doble Sin Comida" >Doble Sin Comida</option>
-                    <option  value="Doble Con Comida" >Doble Con Comida</option>
-                </select> 
-        </div>     
-        <button class="formulario_submit" id ="boton2"> Obtener presupuesto </button>
-        <div class="resultado" id="resultado">
-            <div class="datos">
-              <p>nombre<p>
-              <p>telefono</p>
-              <p>email</p>
-            </div>
+        <input type="hidden" name="_next" value="http://127.0.0.1:5500/presupuesto.html">
+        <input type="hidden" name="_captcha" value="false">
 
-        </div>
-    
-    
+
+        <button type ="submit" class="formulario_submit" id ="boton2"> Enviar datos </button>
+  
     </form>  
-<script src="./js/funciones.js"></script>
-<script src="./js/main.js"></script>
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/validaciones.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
